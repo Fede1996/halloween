@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Notizia in Arrivo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
+
+        :root {
+            --pergamena: #f7e6c1;
+            --marrone-scuro: #4b371c;
+            --nero-ombra: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--marrone-scuro);
+            background-color: var(--pergamena);
+            background-image: url('https://i.imgur.com/tuo_link_pergamena_antica.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 700px;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 0 20px var(--nero-ombra);
+            border: 2px solid var(--marrone-scuro);
+        }
+
+        h1 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.5em;
+            color: var(--marrone-scuro);
+            text-shadow: 2px 2px 4px var(--nero-ombra);
+            position: relative;
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin-top: 20px;
+            color: #2b2010;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Una Notizia in Arrivo</h1>
+        <p>Questa pagina non è ancora disponibile. Appena Gandalf la finirà, cercherà di informare tutte le razze della Terra di Mezzo.</p>
+    </div>
+</body>
+</html>

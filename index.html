@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Compagnia della Mensa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
+
+        :root {
+            --pergamena: #f7e6c1;
+            --marrone-scuro: #4b371c;
+            --rosso-fuoco: #e76f51;
+            --arancione-brillante: #f4a261;
+            --nero-ombra: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--marrone-scuro);
+            background-color: var(--pergamena);
+            background-image: url('https://i.imgur.com/tuo_link_pergamena_antica.jpg'); /* Inserisci qui l'URL della tua immagine di pergamena */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px var(--nero-ombra);
+            position: relative;
+            border: 2px solid var(--marrone-scuro);
+        }
+
+        h1, h2 {
+            font-family: 'Cinzel Decorative', serif;
+            color: var(--marrone-scuro);
+            text-shadow: 2px 2px 4px var(--nero-ombra);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 4em;
+            letter-spacing: 5px;
+            position: relative;
+        }
+        
+        h1:before, h1:after {
+            content: "•";
+            display: inline-block;
+            margin: 0 10px;
+            color: var(--rosso-fuoco);
+        }
+
+        h2 {
+            font-size: 3em;
+            border-bottom: 2px solid var(--marrone-scuro);
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: justify;
+            text-indent: 20px;
+        }
+
+        .button-group {
+            /* Imposta un layout flessibile per i bottoni */
+            display: flex;
+            /* Permette ai bottoni di andare a capo su una nuova riga */
+            flex-wrap: wrap;
+            /* Distribuisce i bottoni in modo uniforme */
+            justify-content: center;
+            /* Aggiunge un piccolo spazio tra i bottoni */
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .button {
+            /* Imposta la larghezza massima per 2 bottoni per riga */
+            flex-basis: calc(50% - 30px);
+            max-width: calc(50% - 30px);
+
+            /* Forza la stessa altezza per tutti i bottoni */
+            height: 60px;
+
+            /* Allinea il testo verticalmente e orizzontalmente */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            /* Stili esistenti */
+            padding: 18px 35px;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: var(--marrone-scuro);
+            border: 3px solid var(--arancione-brillante);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-shadow: 1px 1px 2px var(--nero-ombra);
+            box-shadow: 0 0 10px var(--rosso-fuoco);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--arancione-brillante);
+        }
+
+        .section {
+            padding: 20px;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px var(--nero-ombra);
+            text-align: left;
+        }
+
+        .list-item {
+            list-style: none;
+            margin-bottom: 15px;
+            padding-left: 0;
+        }
+        
+        .list-item:before {
+            content: "✦";
+            margin-right: 10px;
+            color: gold;
+        }
+
+        /* Testo che simula una marchiatura a fuoco */
+        .fire-branded {
+            text-shadow: 0 0 5px var(--arancione-brillante), 0 0 10px var(--rosso-fuoco);
+            color: var(--marrone-scuro);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>La Compagnia del Mensa</h1>
+        <p>La Contea si è radunata, e un'avventura inaspettata è stata decisa. Unisciti a noi per un'epica notte di magia, mistero e sorprese! Mettiti in viaggio per un weekend che celebra sia il mondo incantato della Terra di Mezzo che le cupe e divertenti atmosfere di Halloween.</p>
+        
+        <div class="button-group">
+            <a href="#programma" class="button">Il programma</a>
+            <a href="404.html" target="_blank" class="button">Chat telegram</a>
+            <a href="404.html" target="_blank" class="button">Il form di iscrizione</a>
+            <a href="#ristoranti" class="button">Ristoranti consigliati</a>
+        </div>
+        
+        <div id="programma" class="section">
+            <h2>Il Diario di Bordo</h2>
+            <p>Preparati a un weekend indimenticabile, ricco di attività per tutti i gusti.</p>
+            <ul>
+                <li class="list-item"><span class="fire-branded">Venerdì 31 Ottobre 2025:</span><br>Ore 17:00 museo delle maschere<br>Ore 21:00 apericena con DJ set<br></li>
+                <li class="list-item"><span class="fire-branded">Sabato 1 Novembre 2025:</span><br>Ore 10:00 giro per la città di Acqui Terme<br>Ore 16:00 rappresentazione medievale a tema signore degli anelli con scherma e tiro con l’arco<br>Ore 20:00 Cena sociale della Contea<br></li>
+                <li class="list-item"><span class="fire-branded">Domenica 2 Novembre 2025:</span><br>Ore 10:30 castello di Tagliolo con degustazione (con la guida del marchese).<br></li>
+            </ul>
+        </div>
+
+        <div id="ristoranti" class="section">
+            <h2>Le locande migliori della zona</h2>
+            <p>Non si può affrontare una grande avventura a pancia vuota.</p>
+            <div class="button-group">
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d14136143-Reviews-DaVi_Food_Lab-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">DaVì Food Lab</a>
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d1373872-Reviews-Ristorante_Enoteca_La_Curia-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">Ristorante Enoteca La Curia</a>
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d5895810-Reviews-La_Casa_Di_Ro-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">La casa di Ro</a>
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d8730710-Reviews-Caffe_Dei_Mercanti-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">Caffè dei Mercanti</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
