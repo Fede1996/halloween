@@ -172,6 +172,45 @@
                 font-size: 1.1em;
             }
         }
+        /* Stile per il contenitore del menù a tendina */
+.dropdown-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Stile per l'etichetta del menù */
+.label-fasce-prezzo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 1.1em;
+    color: #4b371c;
+    margin-right: 15px;
+}
+
+/* Stile per il menù a tendina vero e proprio */
+.menu-prezzi {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1em;
+    padding: 8px 15px;
+    border: 2px solid #a69a8b;
+    border-radius: 5px;
+    background-color: #f0e1c6;
+    color: #4b371c;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.menu-prezzi:focus {
+    outline: none;
+    border-color: #8b0000;
+    box-shadow: 0 0 8px #8b0000;
+}
+
+/* Stile per le opzioni all'interno del menù */
+.menu-prezzi option {
+    background-color: #f7e6c1;
+    color: #4b371c;
+}
     </style>
 </head>
 <body>
@@ -215,6 +254,15 @@
         <div id="ristoranti" class="section">
             <h2>Le locande migliori della zona</h2>
             <p>Non si può affrontare una grande avventura a pancia vuota.</p>
+            <div class="dropdown-container">
+                <label for="prezzo" class="label-fasce-prezzo">Scegli la Fascia di Prezzo:</label>
+                <select id="prezzo" name="prezzo" class="menu-prezzi">
+                    <option value="" disabled selected>-- Seleziona una Fascia --</option>
+                    <option value="euro">€ - Un piccolo tributo (per i Nani)</option>
+                    <option value="euro-euro">€€ - Un'offerta generosa (per gli Uomini)</option>
+                    <option value="euro-euro-euro">€€€ - Per un Re (per gli Elfi)</option>
+                </select>
+            </div>
             <div class="button-group">
                 <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d14136143-Reviews-DaVi_Food_Lab-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">DaVì Food Lab</a>
                 <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d1373872-Reviews-Ristorante_Enoteca_La_Curia-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">Ristorante Enoteca La Curia</a>
@@ -227,6 +275,7 @@
 </body>
 
 </html>
+
 
 
 
