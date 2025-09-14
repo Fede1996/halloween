@@ -171,6 +171,24 @@
                 margin: 10px 0;
                 font-size: 1.1em;
             }
+
+            .dropdown-container {
+        /* I due elementi si dispongono uno sopra l'altro */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label-fasce-prezzo {
+        margin-right: 0;
+        margin-bottom: 10px; /* Aggiunge spazio tra etichetta e menù */
+    }
+
+    .menu-prezzi {
+        width: 100%; /* Il menù si espande per tutta la larghezza */
+        max-width: 250px; /* Limita la larghezza per schermi molto grandi in modalità mobile */
+        font-size: 1.2em; /* Aumenta leggermente il font per una migliore leggibilità */
+    }
         }
         /* Stile per il contenitore del menù a tendina */
 .dropdown-container {
@@ -233,7 +251,7 @@
             <ul>
                 <li class="list-item">Due appartamenti 4 posti + lettino in uno se serve</li>
                 <li class="list-item">Una camerata “hobbit” da 4 posti</li>
-                <li class="list-item">Una camera “botte” da 2</li>
+                <li class="list-item">Una camera “botte” da 2 posti</li>
                 <li class="list-item">Una camera da 3 posti (1 matrimoniale + 1 singolo)</li>
                 <li class="list-item">Una camera da 5 posti (1 matrimoniale, 1 singolo, 2 divano)</li>
             </ul>
@@ -245,9 +263,9 @@
             <h2>Il Diario di Bordo</h2>
             <p>Preparati a un weekend indimenticabile, ricco di attività per tutti i gusti.</p>
             <ul>
-                <li class="list-item"><span class="fire-branded">Venerdì 31 Ottobre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">17:00</span> museo delle maschere</li><li class="list-item sub-item">Ore <span class="fire-branded">21:00</span> apericena con DJ set</li></ul>
-                <li class="list-item"><span class="fire-branded">Sabato 1 Novembre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">10:00</span> giro per la città di Acqui Terme</li><li class="list-item sub-item">Ore <span class="fire-branded">16:00</span> rappresentazione medievale a tema signore degli anelli con scherma e tiro con l’arco</li><li class="list-item sub-item">Ore <span class="fire-branded">20:00</span> Cena sociale della Contea</li></ul>
-                <li class="list-item"><span class="fire-branded">Domenica 2 Novembre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">10:30</span> castello di Tagliolo con degustazione (con la guida del marchese).<br></li></ul>
+                <li class="list-item"><span class="fire-branded">Venerdì 31 Ottobre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">17:00</span> Museo delle maschere</li><li class="list-item sub-item">Ore <span class="fire-branded">21:00</span> Apericena con DJ set</li></ul>
+                <li class="list-item"><span class="fire-branded">Sabato 1 Novembre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">10:00</span> Giro per la città di Acqui Terme</li><li class="list-item sub-item">Ore <span class="fire-branded">16:00</span> Rappresentazione medievale a tema Signore degli Anelli con scherma e tiro con l’arco</li><li class="list-item sub-item">Ore <span class="fire-branded">20:00</span> Cena sociale della Contea</li></ul>
+                <li class="list-item"><span class="fire-branded">Domenica 2 Novembre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">10:30</span> Castello di Tagliolo con degustazione (con la guida del marchese)<br></li></ul>
             </ul>
         </div>
 
@@ -275,6 +293,7 @@
 </body>
 
 </html>
+
 
 
 
