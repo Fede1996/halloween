@@ -19,162 +19,6 @@
             font-family: 'Cormorant Garamond', serif;
             color: var(--marrone-scuro);
             background-color: var(--pergamena);
-            background-image: url('https://i.imgur.com/tuo_link_pergamena_antica.jpg'); /* Inserisci qui l'URL della tua immagine di pergamena */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px var(--nero-ombra);
-            position: relative;
-            border: 2px solid var(--marrone-scuro);
-        }
-
-        h1, h2 {
-            font-family: 'Cinzel Decorative', serif;
-            color: var(--marrone-scuro);
-            text-shadow: 2px 2px 4px var(--nero-ombra);
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 4em;
-            letter-spacing: 5px;
-            position: relative;
-        }
-        
-        h1:before, h1:after {
-            content: "•";
-            display: inline-block;
-            margin: 0 10px;
-            color: var(--rosso-fuoco);
-        }
-
-        h2 {
-            font-size: 3em;
-            border-bottom: 2px solid var(--marrone-scuro);
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
-
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            text-align: center;
-            text-indent: 20px;
-        }
-
-        .button-group {
-            /* Imposta un layout flessibile per i bottoni */
-            display: flex;
-            /* Permette ai bottoni di andare a capo su una nuova riga */
-            flex-wrap: wrap;
-            /* Distribuisce i bottoni in modo uniforme */
-            justify-content: center;
-            /* Aggiunge un piccolo spazio tra i bottoni */
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .button {
-            /* Imposta la larghezza massima per 2 bottoni per riga */
-            flex-basis: calc(50% - 30px);
-            max-width: calc(50% - 30px);
-
-            /* Forza la stessa altezza per tutti i bottoni */
-            height: 60px;
-
-            /* Allinea il testo verticalmente e orizzontalmente */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        
-            /* Stili esistenti */
-            padding: 18px 35px;
-            font-size: 1.3em;
-            font-weight: bold;
-            text-decoration: none;
-            color: #ffffff;
-            background-color: var(--marrone-scuro);
-            border: 3px solid var(--arancione-brillante);
-            border-radius: 8px;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            text-shadow: 1px 1px 2px var(--nero-ombra);
-            box-shadow: 0 0 10px var(--rosso-fuoco);
-        }
-
-        .button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px var(--arancione-brillante);
-        }
-
-        .section {
-            padding: 20px;
-            margin-top: 30px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            box-shadow: inset 0 0 10px var(--nero-ombra);
-            text-align: center;
-        }
-
-        .list-item {
-            list-style: none;
-            margin-bottom: 15px;
-            padding-left: 0;
-        }
-        
-        .list-item:before {
-            content: "✦";
-            margin-right: 10px;
-            color: gold;
-        }
-
-        /* Testo che simula una marchiatura a fuoco */
-        .fire-branded {
-            text-shadow: 0 0 5px var(--arancione-brillante), 0 0 10px var(--rosso-fuoco);
-            color: var(--marrone-scuro);
-            font-weight: bold;
-        }
-
-        Certo, la visualizzazione da mobile è un problema comune che si risolve rendendo il sito responsive. Per far sì che la pagina si adatti correttamente a schermi più piccoli, come quelli dei telefoni, è necessario usare le Media Queries in CSS.
-
-Ho aggiornato il codice per fare in modo che la pagina si comporti in modo ottimale su ogni dispositivo.
-
-Codice HTML e CSS Ottimizzato per Mobile
-Ecco il codice completo e aggiornato. Ho aggiunto una sezione @media alla fine del blocco CSS.
-
-HTML
-
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Compagnia della Mensa</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
-
-        :root {
-            --pergamena: #f7e6c1;
-            --marrone-scuro: #4b371c;
-            --rosso-fuoco: #e76f51;
-            --arancione-brillante: #f4a261;
-            --nero-ombra: rgba(0, 0, 0, 0.7);
-        }
-
-        body {
-            font-family: 'Cormorant Garamond', serif;
-            color: var(--marrone-scuro);
-            background-color: var(--pergamena);
             background-image: url('https://i.imgur.com/tuo_link_pergamena_antica.jpg');
             background-size: cover;
             background-repeat: no-repeat;
@@ -283,6 +127,10 @@ HTML
             color: gold;
         }
 
+        .sub-item {
+            color:red;
+        }
+
         .fire-branded {
             text-shadow: 0 0 5px var(--arancione-brillante), 0 0 10px var(--rosso-fuoco);
             color: var(--marrone-scuro);
@@ -358,9 +206,9 @@ HTML
             <h2>Il Diario di Bordo</h2>
             <p>Preparati a un weekend indimenticabile, ricco di attività per tutti i gusti.</p>
             <ul>
-                <li class="list-item"><span class="fire-branded">Venerdì 31 Ottobre 2025:</span><ul><li class="list-item">Ore <span class="fire-branded">17:00</span> museo delle maschere</li><li class="list-item">Ore <span class="fire-branded">21:00</span> apericena con DJ set</li></ul>
-                <li class="list-item"><span class="fire-branded">Sabato 1 Novembre 2025:</span><ul><li class="list-item">Ore <span class="fire-branded">10:00</span> giro per la città di Acqui Terme</li><li class="list-item">Ore <span class="fire-branded">16:00</span> rappresentazione medievale a tema signore degli anelli con scherma e tiro con l’arco</li><li class="list-item">Ore <span class="fire-branded">20:00</span> Cena sociale della Contea</li></ul>
-                <li class="list-item"><span class="fire-branded">Domenica 2 Novembre 2025:</span><ul><li class="list-item">Ore <span class="fire-branded">10:30</span> castello di Tagliolo con degustazione (con la guida del marchese).<br></li></ul>
+                <li class="list-item"><span class="fire-branded">Venerdì 31 Ottobre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">17:00</span> museo delle maschere</li><li class="list-item sub-item">Ore <span class="fire-branded">21:00</span> apericena con DJ set</li></ul>
+                <li class="list-item"><span class="fire-branded">Sabato 1 Novembre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">10:00</span> giro per la città di Acqui Terme</li><li class="list-item sub-item">Ore <span class="fire-branded">16:00</span> rappresentazione medievale a tema signore degli anelli con scherma e tiro con l’arco</li><li class="list-item sub-item">Ore <span class="fire-branded">20:00</span> Cena sociale della Contea</li></ul>
+                <li class="list-item"><span class="fire-branded">Domenica 2 Novembre 2025:</span><ul><li class="list-item sub-item">Ore <span class="fire-branded">10:30</span> castello di Tagliolo con degustazione (con la guida del marchese).<br></li></ul>
             </ul>
         </div>
 
@@ -379,6 +227,7 @@ HTML
 </body>
 
 </html>
+
 
 
 
