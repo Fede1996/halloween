@@ -275,24 +275,60 @@
             <div class="dropdown-container">
                 <label for="prezzo" class="label-fasce-prezzo">Scegli la Fascia di Prezzo:</label>
                 <select id="prezzo" name="prezzo" class="menu-prezzi">
-                    <option value="" disabled selected>-- Seleziona una Fascia --</option>
-                    <option value="euro">€ - Un piccolo tributo (per i Nani)</option>
-                    <option value="euro-euro">€€ - Un'offerta generosa (per gli Uomini)</option>
-                    <option value="euro-euro-euro">€€€ - Per un Re (per gli Elfi)</option>
+                    <option value="">Tutte</option>
+                    <option value="copper-coin">€ - Un piccolo tributo (per i Nani)</option>
+                    <option value="silver-piece">€€ - Un'offerta generosa (per gli Uomini)</option>
+                    <option value="gold-dragon">€€€ - Per un Re (per gli Elfi)</option>
                 </select>
             </div>
-            <div class="button-group">
-                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d14136143-Reviews-DaVi_Food_Lab-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">DaVì Food Lab</a>
-                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d1373872-Reviews-Ristorante_Enoteca_La_Curia-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">Ristorante Enoteca La Curia</a>
-                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d5895810-Reviews-La_Casa_Di_Ro-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">La casa di Ro</a>
-                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d8730710-Reviews-Caffe_Dei_Mercanti-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button">Caffè dei Mercanti</a>
+            <div class="button-group lista-ristoranti">
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d14136143-Reviews-DaVi_Food_Lab-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button silver-piece gold-dragon ristoranti-prezzo">DaVì Food Lab</a>
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d1373872-Reviews-Ristorante_Enoteca_La_Curia-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button silver-piece gold-dragon ristoranti-prezzo">Ristorante Enoteca La Curia</a>
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d5895810-Reviews-La_Casa_Di_Ro-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button copper-coin ristoranti-prezzo">La casa di Ro</a>
+                <a href="https://www.tripadvisor.it/Restaurant_Review-g194661-d8730710-Reviews-Caffe_Dei_Mercanti-Acqui_Terme_Province_of_Alessandria_Piedmont.html" target="_blank" class="button copper-coin ristoranti-prezzo">Caffè dei Mercanti</a>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Seleziona il menù a tendina con l'ID 'prezzo'
+    const selectElement = document.getElementById('prezzo');
+    
+    // Seleziona tutti gli elementi con la classe 'articolo-prezzo'
+    const articoli = document.querySelectorAll('.ristoranti-prezzo');
+
+    // Funzione per aggiornare la visibilità degli articoli
+    function aggiornaVisualizzazione() {
+        // Ottiene il valore dell'opzione selezionata (es. 'copper-coin')
+        const fasciaSelezionata = selectElement.value;
+
+        // Itera su ogni elemento 'articolo-prezzo'
+        articoli.forEach(articolo => {
+            // Se il valore selezionato è vuoto (nessuna fascia) o se la classe dell'articolo
+            // corrisponde alla fascia selezionata, mostra l'articolo
+            if (fasciaSelezionata === '' || articolo.classList.contains(fasciaSelezionata)) {
+                articolo.style.display = 'block';
+            } else {
+                // Altrimenti, nascondi l'articolo
+                articolo.style.display = 'none';
+            }
+        });
+    }
+
+    // Aggiunge un "ascoltatore" al menù a tendina. Ogni volta che il valore cambia,
+    // viene chiamata la funzione aggiornaVisualizzazione()
+    selectElement.addEventListener('change', aggiornaVisualizzazione);
+
+    // Esegue la funzione all'avvio della pagina, per mostrare solo gli elementi
+    // che corrispondono alla selezione iniziale (o tutti se non c'è selezione)
+    aggiornaVisualizzazione();
+});
+        </script>
         
     </div>
 </body>
 
 </html>
+
 
 
 
